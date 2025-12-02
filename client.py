@@ -12,7 +12,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from socket_utils import send_packet, recv_packet, check_server_alive
 
 MAX_CPU_CORES = 4
-SERVERS = [("127.0.0.1", 5000 + i) for i in range(10)]
+SERVERS = [("127.0.0.1", 5000 + i) for i in range(19)]
 
 
 def get_available_servers(servers):
