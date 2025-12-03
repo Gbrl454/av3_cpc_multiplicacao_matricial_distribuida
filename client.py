@@ -85,15 +85,18 @@ def main(matrix_1, matrix_2):
             responses = future.result()
             for result, x, y in responses:
                 matrix_result[x][y] = result
-    # print(matrix_result)
+    print("matrix_result:", matrix_result)
 
 
 if __name__ == "__main__":
-    for n in range(10,301,10):
+    # for n in range(10,301,10): # Ns para Teste
+    for n in [15]:
         initial_time = datetime.now()
         available_servers = len(get_available_servers(SERVERS))
         matrix_1 = get_matrix(n, n)
         matrix_2 = get_matrix(n, n)
+        print("matrix_1:", matrix_1)
+        print("matrix_2:" ,matrix_2)
         main(matrix_1, matrix_2)
         final_time = datetime.now()
         duration_time = final_time - initial_time
